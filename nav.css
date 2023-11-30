@@ -1,0 +1,32 @@
+
+.mainNav {
+    border: 2px #000000;
+    border-radius: 8px;
+    background-color: white;
+    box-sizing: border-box;
+    
+}
+
+.navbar1 {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.navbar1 li {
+    flex: 1;
+    text-align: center;
+}
+
+.navbar1 li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 20px;
+}
+
+.navbar1 li:hover {
+    background-color: #d7ae32;
+}
+
+

@@ -1,0 +1,28 @@
+version: '3.3'
+services:
+  
+  mongo-db:
+    container_name: mongodbcap
+    image: mongo:4.0.19
+    restart: always
+    #environment:
+      # provide your credentials here
+      #- MONGO_INITDB_ROOT_USERNAME=root
+      #- MONGO_INITDB_ROOT_PASSWORD=root
+    ports:
+      - 17027:27017
+    volumes:
+      - mongodb-volume:/data/db
+      - mongodb-config-volume:/data/configdb
+      - ./mongo-files:/root/mongo-files
+    #command: --auth
+
+volumes:
+  mongodb-volume:
+  mongodb-config-volume:
+
+  #python-env:
+  #  build:
+  #    context: .
+  #    dockerfile: Dockerfile
+  #  container_name: python-container

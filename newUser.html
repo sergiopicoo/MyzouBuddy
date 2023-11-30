@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<!--
+    
+Title: Home Page
+
+Use: Home page for our project
+
+Authors: Josh Linck, Danny Smith, Sergio Pico, Jazzmyn Simms
+
+School/Term: Mizzou Fall 2023
+
+Developed: 10/7/23
+
+Tested: 10/8/23
+
+-->
+                <link rel="stylesheet" type="text/css" href="style.css">
+                <link rel="stylesheet" type="text/css" href="nav.css">
+                
+               <meta charset="utf-8">
+               <title>Home</title>
+</head>
+<body>
+    <img src="logo.png" alt="logo" style="width:100px;height:100px;">
+    <div id="mainNavID" class="mainNav">
+        <nav class="navclass">
+            <ul class="navbar1">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="main.html">Main</a></li>
+            <li><a href="page3.html">Dashboard</a></li>
+        </ul>
+        </nav>
+    </div>
+    
+    <main>
+        <h2>Welcome to Study buddy</h2>
+        <p class="homeItem">Welcome to study buddy, get the help you need!</p>
+    </main>
+
+    <form method="POST" action="/login" class="login">
+        <label for="firstName">First Name:</label><br>
+        <input type="firstName" id="firstName" name="firstName"><br>
+        <label for="lastName">Last Name:</label><br>
+        <input type="lastName" id="lastName" name="lastName"><br>
+        <label for="username">New Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">New Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    
+
+    <footer>
+        <p>Authors: Josh Linck, Danny Smith, Sergio Pico, Jazzmyn Simms</p>
+        
+    </footer>
+   
+</body>
+
+</html>

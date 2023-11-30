@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<!--
+    
+Title: Home Page
+
+Use: Home page for our project
+
+Authors: Josh Linck, Danny Smith, Sergio Pico, Jazzmyn Simms
+
+School/Term: Mizzou Fall 2023
+
+Developed: 10/7/23
+
+Tested: 10/8/23
+
+-->
+                <link rel="stylesheet" type="text/css" href="style.css">
+                <link rel="stylesheet" type="text/css" href="nav.css">
+                
+               <meta charset="utf-8">
+               <title>Home</title>
+</head>
+<body>
+    <img src="logo.png" alt="logo" style="width:100px;height:100px;">
+    
+    <div id="mainNavID" class="mainNav">
+        <nav class="navclass">
+            <ul class="navbar1">
+            <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+         <!--     <li><a href="main.html">Main</a></li>
+            <li><a href="page3.html">Dashboard</a></li> -->
+        </ul>
+        </nav>
+    </div>
+    
+    <main>
+        <h2>Welcome back to Study buddy!</h2>
+        <p class="homeItem">I am glad you are back to get the help you need!</p>
+    </main>
+ <div id="container">
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="loginUsername">Email:</label>
+            <input type="text" id="loginUsername" name="loginUsername" required><br><br>
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="loginPassword" required><br><br>
+            <button type="button" onclick="submitLoginForm()">Login</button>
+        </form>
+        <p id="loginMessage"></p>
+    </div>
+
+    <div class="login-container">
+    <h2>Register</h2>
+    <form id="registerForm">
+        <label for="registerUsername">Email:</label>
+        <input type="text" id="registerUsername" name="registerUsername" required><br><br>
+        <label for="registerPassword">Password:</label>
+        <input type="password" id="registerPassword" name="registerPassword" required><br><br>
+        <button type="button" onclick="submitRegisterForm()">Register</button>
+        <h5>Please use school email.</h5>
+    </form>
+    <p id="registerMessage"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+    <footer>
+        <p>Authors: Josh Linck, Danny Smith, Sergio Pico, Jazzmyn Simms</p>
+        
+    </footer>
+   
+</body>
+
+</html>

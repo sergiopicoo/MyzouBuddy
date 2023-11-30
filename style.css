@@ -1,0 +1,134 @@
+
+body {
+    text-align: center; 
+    font-family: Georgia, serif;
+    background-color: #d7ae32;
+    
+}
+
+header {
+    display: inline-block;
+    border-width: thin;
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 8px;
+    background-color: lightgray;
+
+}
+
+footer {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: Georgia, serif
+}
+
+footer p {
+    font-size: 14px; 
+    color: gray;
+    font-family: Georgia, serif
+}
+
+
+body img {
+    padding: 5px;
+    border-radius: 25px 25px 25px 25px;
+    background: url('images/logo.png'), #000000
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px; 
+    height: 200px;
+    border-width: thin;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-radius: 8px;
+    background-color: #d7ae32;
+    width: 300px;
+    height: auto;
+    display: inline-block;
+    font-family: Georgia, serif
+}
+
+.dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px; 
+    height: 200px;
+    border-width: thin;
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 8px;
+    background-color: lightgray;
+    width: 300px;
+    height: auto;
+    display: inline-block;
+    font-family: Georgia, serif
+}
+
+.redLetters {
+    font-size: 20px; 
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px; 
+    height: 200px;
+    border-width: thin;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-radius: 8px;
+    background-color: #d7ae32;
+    width: 300px;
+    height: auto;
+    display: inline-block;
+    font-family: Georgia, serif
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.login-container {
+    width: 45%;
+    background-color: lightgrey;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 10px;
+}
+
+.mission-statement {
+    display: flex;
+    top: 50%;
+    left: 50%;
+    white-space: normal; 
+    max-width: 400px;    
+    padding: 20px;       
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    font-size: 20px;
+    margin-top: 75px;
+    text-shadow: -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black, 1px 1px 1px black; 
+}
+.image-container {
+    float: left;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.left-image {
+    width: 40vw;
+    height: 40vw;
+    padding: 0;
+    margin-left: 5vw;
+}

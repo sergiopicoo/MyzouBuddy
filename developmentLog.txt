@@ -1,0 +1,3 @@
+10/7/23 file created - Josh Linck
+10/8/23 main page created - Josh Linck
+10/8/23 added some basic styling and temporary navbar
