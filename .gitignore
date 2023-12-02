@@ -16,6 +16,8 @@ amplifyconfiguration.dart
 amplify-build-config.json
 amplify-gradle-config.json
 amplifytools.xcconfig
+#MONGO_URI=mongodb+srv://MyzouBuddy:Capstone@mongodbcapatl.jdsn3em.mongodb.net/mongodbcap
+#JWT_SECRET=your_jwt_secret_key
 .secret-*
 **.sample
 #amplify-do-not-edit-end
