@@ -49,7 +49,7 @@ async function run() {
 }
 
 */
-const mongoDBAtlasUri = "mongodb+srv://MyzouBuddy:test@mongodbcapatl.jdsn3em.mongodb.net/mongodbcap";
+const mongoDBAtlasUri = "mongodb+srv://MyzouBuddy:xxx@mongodbcapatl.jdsn3em.mongodb.net/mongodbcap";
 
 mongoose.connect(mongoDBAtlasUri)
     .then(() => console.log('Connected to MongoDB Atlas'))
