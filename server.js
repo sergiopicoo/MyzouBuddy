@@ -12,57 +12,12 @@ const JWT_SECRET = 'your_secret_key';
 
 app.use(cors());
 app.use(express.json());
-/*
-async function run() {
-  const uri =
-    "mongodb+srv://MyzouBuddy:Capstone@mongodbcapatl.jdsn3em.mongodb.net";
 
-  const client = new MongoClient(uri);
-
-  // The connect() method does not attempt a connection; instead it instructs
-  // the driver to connect using the settings provided when a connection
-  // is required.
-  await client.connect();
-
-  // Provide the name of the database and collection you want to use.
-  // If the database and/or collection do not exist, the driver and Atlas
-  // will create them automatically when you first write data.
-  const dbName = "mongodbcap";
-  const collectionName = "userdata";
-
-  // Create references to the database and collection in order to run
-  // operations on them.
-  const database = client.db(dbName);
-  const collection = database.collection(collectionName);
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-*/
 const mongoDBAtlasUri = "mongodb+srv://MyzouBuddy:xxx@mongodbcapatl.jdsn3em.mongodb.net/mongodbcap";
 
 mongoose.connect(mongoDBAtlasUri)
     .then(() => console.log('Connected to MongoDB Atlas'))
     .catch((error) => console.error('Error connecting to MongoDB Atlas:', error));
-
-/*
-const userSchema = new mongoose.Schema({
-    username: String,
-    password: String,
-    isVerified: { type: Boolean, default: false },
-    verificationToken: String,
-});
-*/
 
 const userSchema = new mongoose.Schema({
     username: String,
@@ -84,41 +39,6 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post("/register", async (req, res) => {
-    /*
-    const { username, password } = req.body;
-    console.log("Received registration request for username:", username);
-
-    const existingUser = await User.findOne({ username });
-    if (existingUser) {
-        console.log("User already exists:", existingUser);
-        return res.status(400).json({ error: "Username already exists" });
-    }
-
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash(password, salt);
-
-    const verificationToken = jwt.sign({ username }, JWT_SECRET);
-
-    const mailOptions = {
-        from: 'Mystudybudyapp@gmail.com',
-        to: username,
-        subject: 'Email Verification',
-        text: `Click the following link to verify your email: http://localhost:3000/verify/${verificationToken}`
-    };
-
-    transporter.sendMail(mailOptions, async (error, info) => {
-        if (error) {
-            console.error("Email verification error:", error);
-            return res.status(500).json({ error: "Error sending verification email, invalid email" });
-        }
-        console.log('Verification email sent:', info.response);
-
-        const newUser = new User({ username, password: hashedPassword, verificationToken, classes: [] });
-        await newUser.save();
-
-        res.status(201).json({ message: "User registered successfully. Check your email for verification instructions." });
-    });
-    */
     try {
         const { username, password } = req.body;
         console.log("Received registration request for username:", username);
@@ -184,7 +104,7 @@ app.post("/login", async (req, res) => {
     const { username, password } = req.body;
 
     try {
-        const user = await Userdata.findOne({ username });
+        const user = await User.findOne({ username });
         if (!user) {
             return res.status(401).json({ error: "Invalid credentials" });
         }
